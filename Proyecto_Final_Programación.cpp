@@ -12,7 +12,7 @@ struct Multa {
 void registrarMulta(const Multa& multa) {
     ofstream archivo("C:\\RegistroDeMultas\\" + multa.fecha + "_" + multa.nombreInfractor + ".txt");
     archivo << "Nombre del Infractor: " << multa.nombreInfractor << endl;
-    archivo << "Descripción: " << multa.descripcion << endl;
+    archivo << "DescripciÃ³n: " << multa.descripcion << endl;
     archivo << "Fecha: " << multa.fecha << endl;
     archivo << "Monto: " << multa.monto << endl;
     archivo.close();
@@ -22,7 +22,7 @@ int main() {
     Multa nuevaMulta;
     cout << "Ingrese el nombre del infractor: ";
     getline(cin, nuevaMulta.nombreInfractor);
-    cout << "Ingrese la descripción de la multa: ";
+    cout << "Ingrese la descripciÃ³n de la multa: ";
     getline(cin, nuevaMulta.descripcion);
     cout << "Ingrese la fecha (DDMMYYYY): ";
     getline(cin, nuevaMulta.fecha);
@@ -30,7 +30,7 @@ int main() {
     cin >> nuevaMulta.monto;
 
     registrarMulta(nuevaMulta);
-    cout << "Multa registrada con éxito." << endl;
+    cout << "Multa registrada con Ã©xito." << endl;
 
     return 0;
 }
